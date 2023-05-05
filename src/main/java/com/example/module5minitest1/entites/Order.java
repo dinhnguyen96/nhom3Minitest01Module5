@@ -18,6 +18,8 @@ public class Order implements Serializable {
 
     private Date orderDate;
 
+    private boolean orderStatus;
+
     private Customer customer;
 
 
@@ -55,5 +57,15 @@ public class Order implements Serializable {
     public void setCustomer(Customer customer)
     {
         this.customer = customer;
+    }
+
+    @Column(name = "orderStatus")
+    public boolean isOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(boolean orderStatus)
+    {
+        this.orderStatus = orderStatus;
     }
 }
