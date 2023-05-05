@@ -2,11 +2,14 @@ package com.example.module5minitest1.entites;
 
 import jakarta.persistence.*;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
 public class Item implements Serializable {
 
+    @Serial
+    private static final long serialVersionUID = 1L;
     private Long id;
 
     private Product product;
@@ -55,10 +58,10 @@ public class Item implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "cartID")
-    public Cart getCart() {
+    public Cart getCart()
+    {
         return cart;
     }
-
     public void setCart(Cart cart) {
         this.cart = cart;
     }
