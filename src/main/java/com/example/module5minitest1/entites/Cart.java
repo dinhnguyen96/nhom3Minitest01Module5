@@ -9,7 +9,7 @@ public class Cart implements Serializable {
 
     private Long id;
 
-    private User user;
+    private Customer customer;
 
 
     public Cart()
@@ -29,12 +29,13 @@ public class Cart implements Serializable {
     }
 
     @ManyToOne
-    @JoinColumn(name = "userId")
-    public User getUser() {
-        return user;
+    @JoinColumn(name = "customerID")
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setCustomer(Customer customer)
+    {
+       this.customer = customer;
     }
 }

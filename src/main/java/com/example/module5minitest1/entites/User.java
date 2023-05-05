@@ -9,8 +9,8 @@ import java.sql.Date;
 import java.util.List;
 
 @Entity
-public class User implements Serializable {
-
+public class User implements Serializable
+{
     @Serial
     private static final long serialVersionUID = 1L;
 
