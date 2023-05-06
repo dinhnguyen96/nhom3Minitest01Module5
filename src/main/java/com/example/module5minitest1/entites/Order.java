@@ -8,6 +8,7 @@ import java.io.Serializable;
 import java.sql.Date;
 
 @Entity
+@Table(name = "Oder1")
 public class Order implements Serializable {
 
     @Serial
